@@ -5,4 +5,4 @@ node_modules/
 # Bỏ qua log
 *.log
 
-.rest
+request.rest
