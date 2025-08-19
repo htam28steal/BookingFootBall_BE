@@ -25,10 +25,9 @@ jobs:
        run: npm ci 
 
      -  name: Syntax check
-        run: npx tsc --noEmit || echo "No TS, skipping" && node -c index.js
-
+        run: npx tsc --noEmit 
      - name: Lint check
-       run: npm run lint || echo "No lint script yet"
+       run: npm run lint 
 
      - name: Build app
-       run: npm run build || echo "No build step yet"
+       run: npm run build 
