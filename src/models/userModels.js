@@ -12,7 +12,7 @@ const UserModel = {
         } catch (err) {
             console.error('Error in getUserByEmail:', err);
             throw err;
-        }
+        
     
 };
 
