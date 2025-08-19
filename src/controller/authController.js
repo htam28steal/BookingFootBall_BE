@@ -16,7 +16,7 @@ const AuthController = {
             const accessToken = await AuthService.refreshToken(refreshToken)
             res.json({ accessToken });
         } catch (err) {
-
+            console.log(`error`, err)
         }
     }
 }

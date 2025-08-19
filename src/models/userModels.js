@@ -14,6 +14,7 @@ const UserModel = {
             throw err;
         
         }
+    }
     
 };
 
