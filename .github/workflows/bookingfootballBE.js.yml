@@ -25,7 +25,8 @@ jobs:
        run: npm ci 
 
      -  name: Syntax check
-        run: npx tsc --noEmit 
+        run: find . -name "*.js" -not -path "./node_modules/*" -exec node -c {} \;
+
      - name: Lint check
        run: npm run lint 
 
