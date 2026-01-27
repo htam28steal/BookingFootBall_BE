@@ -31,8 +31,8 @@ const AuthService = {
         if (!res) throw new Error('User not found');
         const user = res;
 
-        const isMatch = password === user.password;
 
+        const isMatch = password.trim() == user.password.trim();
 
         if (!isMatch) throw new Error('Invalid password');
         const accesstoken = await AuthService.generateAccessToken(user);

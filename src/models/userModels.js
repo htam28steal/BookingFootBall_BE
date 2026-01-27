@@ -1,9 +1,10 @@
-const { sql, poolPromise } = require('../config/database');
+const { sql, initDb } = require("../config/database");
+
 
 const UserModel = {
     getUserByEmail: async (email) => {
         try {
-            const pool = await poolPromise;
+            const pool = await initDb();
             const result = await pool.request()
                 .input('email', sql.VarChar, email)
                 .query('SELECT * FROM dbo.users WHERE email = @email');

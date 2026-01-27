@@ -9,7 +9,7 @@ const tokenUtils = {
             email: user.user.email,
             role: user.role
         }
-        return jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '15s' })
+        return jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '7d' })
     },
 
     generateRefreshToken: (user) => {
